@@ -1,7 +1,6 @@
-
 # Getting started with RStudio
 
-RStudio is a free and open source R integrated development environment. It provides a built in editor, works on all platforms (including on servers as you are currently experiencing) and provides many advantages such as integration with version control and project management.
+RStudio is a free and open source R integrated development environment. It provides a built in editor, works on all platforms (including on servers) and provides many advantages such as integration with version control and project management.
 
 
 **Basic layout**
@@ -50,9 +49,9 @@ other characters such as a comma or a space. You will be wise to adopt
 a convention for demarcating words in names.
 
 ```coffee
-iUseCamelCase
+i_use_underscores
+OthersStillUseCamelCase
 other.people.use.periods
-even_others_use_underscores
 ```
 
 R has a mind-blowing collection of built-in functions that are
@@ -232,12 +231,12 @@ More info: [http://www.rstudio.com/ide/docs/using/projects](http://www.rstudio.c
 
 Let's make one to use for the rest of this workshop. Do this: `Projects menu --> Create project.... New Project`. The directory name you choose here will be the project name. Call it whatever you want (or follow me for convenience).
 
-You can create a directory and, therefore RStudio project, called `tgac-bootcamp`.
+You can create a directory and, therefore RStudio project, called `intro-to-r`.
 
 <!-- https://github.com/yihui/knitr/issues/277 -->
 
 ```coffee
-setwd("~/tgac-bootcamp/")
+setwd("~/intro-to-r/")
 getwd()
 ```
 
