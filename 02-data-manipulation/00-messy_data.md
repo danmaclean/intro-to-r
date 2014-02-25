@@ -1,15 +1,14 @@
 # A short tutorial on how to read and clean messy data
 
-Raw data from various ecological studies can be poorly formatted and/or may lack appropriate details of the study. Correcting data in place can be a dangerous exercise since the original raw data would get overwritten and there would be no way to audit this process or recover from mistakes made during this time. A good data practice would be to maintain the original data, but use a programmatic script to clean it, fix mistakes and save that cleaned dataset for further analysis. 
+Raw data from various studies can be poorly formatted and/or may lack appropriate details of the study. Correcting data in place, in Excel or a text editor can be a dangerous exercise since the original raw data would get overwritten and there would be no way to audit this process or recover from mistakes made during this time. Therefore this practice is not REPRODUCIBLE. A good data practice would be to maintain the original data, but use a programmatic script to clean it, fix mistakes and save that cleaned dataset for further analysis. Someone else could now reproduce your analysis from the first data set. 
 
 ![A sample workflow](sample_workflow.png)
 
 
 ## Tidy data
 
-* Tidy data vs Clean data
-
-
+* Tidy data and Clean data
+Tidy data is that in a format R can work with.
 
 ### A warm-up example - Dataframes in R are columns of variables.
 
@@ -74,9 +73,7 @@ str(dat)
 
 ## More messy: non-standard input formats
 
-
-
-In the example below, we use a data file obtained as plain text and clean up incorrect spacing, separators. Then we look up the appropriate metadata 
+Sometimes we have really messy input data. In the example below, we use a data file obtained as plain text and clean up incorrect spacing, separators using code. The process is quite involved but is worth looking through. No computer program can handle every arbitrary text file you might get handed, so its often needed to clean things up on a by case basis. Lets step through a process... 
 
 
 ```coffee
@@ -253,7 +250,7 @@ tail(cleaned_data)
 ```
 
 
-Now we can confidently save these data into a separate file which w called `cleaned_data.csv`. In a real world use case your file name would be more descriptive.
+Now we can confidently save these data into a separate file which we call `cleaned_data.csv`. In a real world use case your file name would be more descriptive.
 
 
 
