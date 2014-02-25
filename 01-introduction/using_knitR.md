@@ -99,4 +99,6 @@ Markdown is a straightforward way of formatting text, that `knitR` can make pret
 ```
 
 
-## `knitR forms the basis of 
+## `knitR` forms the basis of reproducible workflows in R
+
+By combining, input, processing and output in one executable document a `knitR` document provides the best starting point for all R analysis. The document becomes a living lab-book that you can easily share and publish as supplemental methods. The `knitR` document outperforms a script by making so much more of the process explicit and by including the output in the same document as the code. Try to make use of `knitR` as much as you can and convert any existing scripts into `knitR` markdown. 
