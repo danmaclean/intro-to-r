@@ -12,9 +12,9 @@ Type in the name of the package you want (in this case `knitR`), make sure that 
 The whole process should be automatic! 
 
 
-## Creating documents with Markdown and generating them with `knitR`
+## Creating documents with `knitR`
 
-`knitR` takes in a Markdown format file with embedded R code and creates a new, pretty, interpreted document. To create a new document, go to `File --> New File --> R Markdown`. A new document should appear in the top-left pane. It should look like this.
+`knitR` takes in a Markdown format file with embedded R code and creates a new, pretty, interpreted document. To create a new document to be `knitR`-ed, go to `File --> New File --> R Markdown`. A new document should appear in the top-left pane. It should look like this.
 
 
 ```coffee
@@ -37,3 +37,19 @@ You can also embed plots, for example:
 
 
 ```
+
+You have a simple document title, some explanatory text, and some blocks of R code. The only rule is that the R code must be within the three back-tick symbols and the `{r}`. For example,
+
+```coffee
+
+Here is some intro text followed by a block of R code... 
+
+    ```{r}
+    x <- runif(10)
+    plot(x)
+    ```
+When the R code is run, the results are inserted in place into the document.
+
+```
+
+Markdown is a straightforward way of formatting text, that `knitR` can make pretty for you. You can make headings, links, lists, sub-headings all very easily. 
