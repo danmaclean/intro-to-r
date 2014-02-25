@@ -1,4 +1,3 @@
-
 # A short tutorial on how to read and clean messy data
 
 Raw data from various ecological studies can be poorly formatted and/or may lack appropriate details of the study. Correcting data in place can be a dangerous exercise since the original raw data would get overwritten and there would be no way to audit this process or recover from mistakes made during this time. A good data practice would be to maintain the original data, but use a programmatic script to clean it, fix mistakes and save that cleaned dataset for further analysis. 
@@ -10,18 +9,27 @@ Raw data from various ecological studies can be poorly formatted and/or may lack
 
 * Tidy data vs Clean data
 
-### Most common problems:
+
+
+### A warm-up example - Dataframes in R are columns of variables.
+
+A typcial table in a book or paper that makes nice sense to a human being, isnt (unfortunately) in the right format for R applications. Loading it into a dataframe without manipulating it further will cause many problems. 
+
+R likes to have:
+
+1. Single variable types in columns
+2. Variables in columns, not rows. 
+3. The column names outside of the data
+
+
+### Most common problems are caused by:
 
 
 1. Values as columns  (melt to long format)
 2. Multiple values in a single cell (some regexpr to split em)
 3. variables in rows (cast)
 
-
-### A warm-up example
-
-
-
+The command below creates a table that we will all be familiar with but that is wrong for R
 ```coffee
 dat <- data.frame(males = c(injured = 4, uninjured = 2), females = c(injured = 1, 
     uninjured = 5))
@@ -34,8 +42,7 @@ dat
 ## uninjured     2       5
 ```
 
-
-names as a column we can manipulate
+So we need to manipulate it to be good to work with in R. First lets make the names into a column, using `cbind`:
 
 
 ```coffee
@@ -43,7 +50,7 @@ dat <- cbind(dat, status = rownames(dat))
 ```
 
 
-Get values out of columns, variables as columns:
+Get values out of columns, make the variables as columns using `melt` (`melt` is a function in the `reshape` package):
 
 
 ```coffee
@@ -58,7 +65,12 @@ Add some nice metadata that was absent before:
 names(dat) <- c("status", "sex", "count")
 ```
 
+Have a look at `dat`. The format is a much better dataframe for working with R.
 
+```coffee
+dat
+str(dat)
+```
 
 ## More messy: non-standard input formats
 
@@ -69,7 +81,8 @@ In the example below, we use a data file obtained as plain text and clean up inc
 
 ```coffee
 library(stringr)
-# If you don't have this package simply run install.packages('stringr')
+# If you don't have this package simply run install.packages('stringr') or install using the buttons as before.
+
 rawData <- readLines("data/messy_data.txt")
 ```
 
