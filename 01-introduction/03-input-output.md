@@ -35,7 +35,7 @@ dt <- readLines("data/messy-data.txt")
 ## Files from the web
 
 ```
-url <- "https://raw.github.com/karthikram/ggplot-lecture/master/climate.csv"
+url <- "http://raw.github.com/karthikram/ggplot-lecture/master/climate.csv"
 my_data <- read.csv(url, header = TRUE)
 ```
 
