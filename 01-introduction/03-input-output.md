@@ -1,4 +1,3 @@
-
 # Input output operations
 
 ## Inputting data
@@ -60,7 +59,7 @@ setwd()
 
 ## Writing files
 
-Saving files is easy in R. We have loaded the `iris` dataset into our memory. Can you save this back to a `csv` file to disk with the name `tgac_iris.csv`?
+Saving files is easy in R. We have loaded the `iris` dataset into our memory. Can you save this back to a `csv` file to disk with the name `tsl_iris.csv`?
 
 What commands did you use?
 
@@ -68,8 +67,8 @@ What commands did you use?
 # Short term storage
 
 ```coffee
-saveRDS(iris, file = "tgac_iris.rds")
-iris_data <- readRDS("tgac_iris.rds")
+saveRDS(iris, file = "tsl_iris.rds")
+iris_data <- readRDS("tsl_iris.rds")
 ```
 This is great for short term storage. All factors and other modfications to the dataset will be preserved. However, only R can read these data back and not the best option if you want to keep the file stored in the easiest format.
 
