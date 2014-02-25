@@ -113,7 +113,7 @@ length(daniel)
 ```
 one <- subset(bnames, sex == "boy" & year == 2008)
 one <- mutate(one,
-  rank = rank(desc(prop), ties.method = "min"))
+  rank = rank(desc("prop"), ties.method = "min"))
 head(one)
 ```
 
@@ -121,7 +121,7 @@ head(one)
 
 ```
 bnames <- ddply(bnames, c("sex", "year"), mutate,
-  rank = rank(desc(prop), ties.method = "min"))
+  rank = rank(desc("prop"), ties.method = "min"))
 ```
 
 ![](full_apply_suite.png)
