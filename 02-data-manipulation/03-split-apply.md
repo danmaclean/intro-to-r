@@ -102,7 +102,7 @@ bnames <- read.csv("data/baby-names.csv")
 Extract your name from this dataset (if it's there)
 
 ```
-daniel <- subset(bnames, name == "daniel")
+daniel <- subset(bnames, name == "Daniel")
 length(daniel)
 ```
 
