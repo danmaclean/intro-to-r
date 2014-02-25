@@ -1,4 +1,3 @@
-
 # Using the split-apply strategy to manipulate data
 
 Groupwise operations - The plyr package provides an elegant way to extract complicated information from any data set. Most data manipulation tasks can be reduced to a core set of actions. plyr provides an easy to learn interface for these actions. We’ll show you how to mine a data set for its hidden gems, with plyr’s’ consistent, purposefully-designed workflow. In this module, you will
@@ -97,15 +96,14 @@ ddply(iris, .(Species), summarise, mean_sepal = mean(Sepal.Length))
 
 
 ```coffee
-# Can read compressed files directly
-bnames <- read.csv("data/bnames2.csv.csv.bz2")
+bnames <- read.csv("data/baby-names.csv")
 ```
 
 Extract your name from this dataset (if it's there)
 
 ```
-karthik <- subset(bnames, name == "karthik")
-# my name is a little too uncommon in this dataset
+daniel <- subset(bnames, name == "daniel")
+length(daniel)
 ```
 
  **What if we want to compute the rank of a name
