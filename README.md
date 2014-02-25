@@ -1,4 +1,3 @@
-
 ![](cropped-textlogo.png)
 
 # An Introduction to R  
@@ -47,5 +46,5 @@ If you know how to use GitHub, then simply clone this repository. Otherwise clic
 
 
 ## License  
-<a rel="license" href="http://creativecommons.org/licenses/by/2.0/">Creative Commons Attribution 2.0 Generic License</a>. Many thanks to [Hadley Wickham](http://had.co.nz/) for example datasets for plyr.
+<a rel="license" href="http://creativecommons.org/licenses/by/2.0/">Creative Commons Attribution 2.0 Generic License</a>. Many thanks to [Hadley Wickham](http://had.co.nz/)  for example datasets for plyr and Karthik Ram ([homepage](http://inundata.org/) ) for basically writing this course.
 
