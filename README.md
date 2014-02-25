@@ -17,9 +17,7 @@ This course is very heavily based on an excellent workshop given by Karthik Ram 
 | -  | Coffee Break  |
 | AM 2 | Session 2 **[Data manipulation in R, functions and other control structures]** |
 | - | Lunch  |
-| PM 1 | Session 3 **[Simple stats tests, summaries of data]**  |
-| - | Coffee Break  |
-| PM 2 | Session 4 **[Data visualization in R]**  |
+| PM 3 | Session 4 **[Data visualization in R]**  |
 | - | Wrap-up |
 
 
