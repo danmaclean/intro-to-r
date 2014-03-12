@@ -7,9 +7,9 @@ Groupwise operations - The plyr package provides an elegant way to extract compl
 * `subset`
 * `summarise`
 *  `arrange`
-*  split-apply strategies
+*  `split-apply strategies`
 
-By aster the split-apply-combine strategy and use it to solve complicated data manipulation problems.
+By master the split-apply-combine strategy and use it to solve complicated data manipulation problems.
 
 # The split-apply strategy
 
@@ -70,11 +70,6 @@ You can also run transformation on the data quite efficiently using mutate
 mutate(df, double = 2 * value)
 ```
 
----
-
-## More on groupwise transformations
-
-Let's read a large dataset of baby names from the social security administration.
 
 ```
 library(plyr)
@@ -94,6 +89,13 @@ ddply(iris, .(Species), summarise, mean_sepal = mean(Sepal.Length))
 
 ![](sac_full.png)
 
+
+
+---
+
+## More on groupwise transformations
+
+Let's read a large dataset of baby names from the social security administration.
 
 ```coffee
 bnames <- read.csv("data/baby-names.csv")
